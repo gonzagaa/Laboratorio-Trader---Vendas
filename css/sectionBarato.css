@@ -1,0 +1,49 @@
+#barato {
+    overflow: hidden;
+    position: relative;
+}
+
+#barato header:nth-child(2) h2 {
+    font-size: 1.8rem;
+}
+
+#barato header p {
+    font-size: 1.3rem;
+
+}
+
+#barato header p span {
+    font-weight: 700;
+    color: #ffffff;
+
+}
+
+#barato header p.obs {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.7rem;
+}
+
+@media (min-width: 1080px) {
+    section#barato header:nth-child(2) h2 {
+        font-size: 3rem;
+    }
+
+    section#barato .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+
+    section#barato header {
+        padding: 3rem;
+
+        backdrop-filter: blur(14px) saturate(180%);
+        -webkit-backdrop-filter: blur(14px) saturate(180%);
+        background-color: rgba(0, 0, 0, 0.43);
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        border-radius: 2rem;
+
+        height: 100%;
+    }
+}

@@ -1,0 +1,49 @@
+#obrigado {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    max-height: 100vh;
+}
+
+#obrigado img.logo {
+    margin-bottom: 4rem;
+    width: 10rem;
+}
+
+#obrigado header {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#obrigado header h2 {
+    font-size: 1.8rem;
+
+    margin-bottom: 1rem;
+}
+
+#obrigado header h2.dois {
+    color: #a2b0c3;
+}
+
+#obrigado header a {
+    width: 100%;
+}
+
+#obrigado header a button {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 1080px) {
+    section#obrigado header {
+        padding-inline: 25%;
+    }
+
+     section#obrigado header h2 {
+        font-size: 3rem;
+     }
+}

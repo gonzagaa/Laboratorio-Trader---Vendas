@@ -1,0 +1,123 @@
+#duro {
+    overflow: hidden;
+    position: relative;
+}
+
+#duro .content {
+    position: relative;
+    z-index: 1;
+}
+
+#duro img.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+#duro img.bg.desktop {
+    display: none;
+}
+
+#duro header h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+#duro header .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#duro header h3 {
+    font-size: 2rem;
+    color: #fff;
+
+    margin-bottom: 1rem;
+    padding: .5rem 2rem;
+    border-radius: 1rem;
+
+    width: max-content;
+}
+
+#duro header h3.red {
+    background: #bd0909;
+}
+
+#duro header h3.green {
+    background: #12bd09;
+}
+
+#duro header h3.gradient {
+    background: var(--gradient);
+    font-size: 1.4rem;
+}
+
+#duro .box ion-icon {
+    display: none;
+}
+
+#duro .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#duro a {
+    width: 100%;
+}
+
+#duro a button {
+    width: 100%;
+}
+
+@media (min-width: 1080px) {
+    section#duro img.bg.mobile {
+        display: none;
+    }
+
+    section#duro img.bg.desktop {
+        display: inherit;
+    }
+
+    section#duro .wrapper .content header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 0;
+        align-items: start;
+        gap: 4rem;
+    }
+
+    section#duro header .box {
+        align-items: start;
+        text-align: left;
+
+        padding-left: 2rem;
+        border-left: 2px solid #ffffff58;
+
+    }
+
+    section#duro .box ion-icon {
+        display: inherit;
+        margin-top: 2rem;
+        font-size: 2rem;
+        padding: 1.5rem;
+        background: var(--gradient);
+        color: #fff;
+        border-radius: 50%;
+    }
+
+    section#duro a {
+        width: initial;
+    }
+
+    section#duro a button {
+        margin-top: 3rem;
+    }
+}

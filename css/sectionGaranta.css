@@ -1,0 +1,227 @@
+#garanta {
+    overflow: hidden;
+    position: relative;
+}
+
+#garanta img.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+#garanta img.bg.desktop {
+    display: none;
+}
+
+
+#garanta .content {
+    position: relative;
+    z-index: 1;
+}
+
+#garanta header img.logo {
+    width: 10rem;
+    margin-bottom: 3rem;
+}
+
+#garanta header h3 {
+    background: linear-gradient(45deg, #188bcd33, #3a38bc36);
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 600;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 1rem;
+
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    text-align: center;
+    justify-content: center;
+
+    margin-bottom: 1rem;
+}
+
+#garanta header h3 span {
+    color: #ffcdcd;
+    text-decoration: line-through;
+}
+
+#garanta .card {
+    border: 2px solid #ffffff45;
+    border-radius: 1rem;
+    width: 100%;
+    padding: 3rem;
+    background: linear-gradient(45deg, #188bcd66, #3a38bc6e);
+}
+
+#garanta .card h3 {
+    font-size: 1.6rem;
+    font-family: var(--ncs);
+    color: #fff;
+}
+
+#garanta .card h3 span {
+    font-size: 1.6rem;
+    color: #ff6161;
+    text-decoration: line-through;
+}
+
+#garanta .card p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+#garanta .card p span {
+    color: rgb(11, 228, 11);
+}
+
+#garanta .card h4 {
+    font-family: var(--ncs);
+    font-size: 3rem;
+    color: #fff;
+
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    background: #ffffff18;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+#garanta .card h4 span {
+    font-size: 2rem;
+}
+
+#garanta .card h4 span.green {
+    color: rgb(11, 228, 11);
+    font-size: 3rem;
+
+    
+}
+
+#garanta .card h4 span.red {
+    color: #ff6161;
+    text-decoration: line-through;
+    font-size: 2rem;
+}
+
+#garanta .card h5 {
+    font-size: 1.8rem;
+    font-family: var(--ncs);
+    color: #fff;
+}
+
+#garanta .topics {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+  }
+
+#garanta .topics .topic {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background: #ffffff14;
+    border-radius: .5rem;
+    width: 100%;
+    border: 3px solid #188bcd37;
+}
+
+#garanta .topics .topic p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #ffffff;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+#garanta .topics .topic p span {
+    color: #ff6161;
+    text-decoration: line-through;
+}
+
+#garanta .topics .topic ion-icon {
+    color: #0088ff;
+}
+
+#garanta header.dois {
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+}
+
+#garanta a button {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+@media (min-width: 1080px) {
+    section#garanta img.bg.mobile {
+        display: none;
+    }
+
+    section#garanta img.bg.desktop {
+        display: inherit;
+    }
+
+    section#garanta .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+
+        background: #fff;
+        padding: 3rem;
+        border-radius: 2rem;
+
+        backdrop-filter: blur(14px) saturate(180%);
+        -webkit-backdrop-filter: blur(14px) saturate(180%);
+        background-color: rgba(0, 0, 0, 0.43);
+        border: 1px solid rgba(255, 255, 255, 0.125);
+
+        box-shadow:  10px 10px 40px #13134598,
+             -10px -10px 40px #032b44af;
+    }
+
+    section#garanta header {
+        width: 100%;
+    }
+
+    section#garanta header h2 {
+        font-size: 2rem;
+    }
+
+    section#garanta header h3 {
+        width: 100%;
+    }
+
+    section#garanta a {
+        width: 100%;
+    }
+
+    section#garanta a button {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    section#garanta .wrapper {
+        padding-inline: 20%;
+    }
+
+    section#garanta .barra {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1080px) {
+    section#garanta .wrapper {
+        padding-inline: 10%;
+    }
+}

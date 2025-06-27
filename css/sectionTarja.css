@@ -1,0 +1,42 @@
+#tarja {
+    position: relative;
+    overflow: hidden;
+    padding-block: 4rem;
+
+    background: linear-gradient(to right, #D9F0FF, #FFFFFF, #FFFFFF, #DADAFF);
+}
+
+#tarja header {
+    margin-bottom: 0;
+}
+
+#tarja h2 {
+    color: var(--bg-black);
+    font-size: 3rem;
+}
+
+#tarja h3 {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+@media (min-width: 1080px) {
+    section#tarja {
+        margin-top: -5rem;
+    }
+
+    section#tarja .content header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    section#tarja .content header h2 {
+        font-size: 3rem;
+        text-align: left;
+    }
+
+    section#tarja .content header h3 {
+        font-size: 1.8rem;
+        text-align: right;
+    }
+}

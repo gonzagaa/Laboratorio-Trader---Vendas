@@ -1,0 +1,149 @@
+#programacao {
+    position: relative;
+    overflow: hidden;
+}
+
+#programacao header h2 {
+    font-size: 1.8rem;
+}
+
+#programacao img.bg {
+    position: absolute;
+    width: 160%;
+    top: -4%;
+    left: 47%;
+    transform: translate(-50%, 0);
+    z-index: 0;
+
+    mask-image: linear-gradient(to bottom, #000 10%, transparent 60%);
+}
+
+#programacao header {
+    position: relative;
+    z-index: 1;
+
+    margin-top: 50%;
+}
+
+#programacao header p {
+    margin-bottom: 0;
+}
+
+#programacao header h2:nth-child(4) {
+    margin-top: 1rem;
+
+    margin-block: 3rem;
+}
+
+#programacao .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#programacao .card {
+    width: 100%;
+    padding: 1rem;
+
+    background: linear-gradient(to right, #021b2b, #060B15,#060B15, #0c0c30);
+}
+
+#programacao .card h3 {
+    font-size: 1.4rem;
+    color: #fff;
+    font-weight: 600;
+}
+
+#programacao .card h3 span {
+    background: linear-gradient(45deg, #188bcd50, #3a38bc36);;
+    font-size: 1.6rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    color: #ffffffe9;
+    text-shadow: -1px 2px 20px #6665a4c3;
+
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+
+    display: block;
+
+    margin-bottom: 2rem;
+}
+
+
+@media (min-width: 1080px) {
+    section#programacao header {
+        margin-top: 0;
+    }
+
+    section#programacao img.bg {
+        mask-image: linear-gradient(to right, #000 40%, transparent);
+        width: 70%;
+        left: -10%;
+        transform: initial;
+        top: -17%;
+    }
+
+    section#programacao .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "a b";
+    }
+
+    section#programacao .content header {
+        grid-area: b;
+
+        align-items: start;
+    }
+
+    section#programacao header h2 {
+        font-size: 3rem;
+
+        text-align: left;
+    }
+
+    section#programacao header h2.dois {
+        margin-block: 0;
+        margin-top: 2rem;
+    }
+
+    section#programacao header p {
+        text-align: left;
+    }
+
+    section#programacao .content .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        gap: 1rem;
+
+        margin-top: 2rem;
+    }
+
+    section#programacao .content .cards .card {
+        height: 100%;
+        border: 2px solid #ffffff16;
+        border-radius: 1rem;
+
+        background: linear-gradient(145deg, #021b2b, #060B15,#060B15, #0c0c30);
+    }
+
+    section#programacao .card h3 {
+        font-size: 1.2rem;
+    }
+
+    section#programacao .card h3 span {
+        font-size: 1.3rem;
+
+        margin-bottom: 1rem;
+    } 
+}
+
+@media (min-width: 1700px) {
+     section#programacao img.bg {
+        width: 40%;
+        left: 5%;
+     }
+}

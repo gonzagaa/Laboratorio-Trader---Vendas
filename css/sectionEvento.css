@@ -1,0 +1,143 @@
+#evento {
+    position: relative;
+    overflow: hidden;
+}
+
+#evento .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+#evento .card {
+    width: 100%;
+    padding-inline: 2rem;
+    padding-block: 4rem;
+    border-radius: 1rem;
+
+    background: linear-gradient(145deg, #032B44, #060B15,#060B15, #131345);
+    border: 2px solid #ffffff3d;
+
+    box-shadow:  10px 10px 30px #13134538,
+             -10px -10px 30px #032b443a;
+}
+
+#evento .card h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    font-family: var(--ncs);
+    text-transform: uppercase;
+
+    padding-inline: 2%;
+}
+
+#evento .card:nth-child(2) h3 {
+    padding-inline: 5%;
+}
+
+#evento .card h3 span {
+    background: var(--gradient);
+    font-size: 1.9rem;
+    padding-inline: .5rem;
+    border-radius: .5rem;
+    color: #ffffffe9;
+    text-shadow: -1px 2px 20px #6665a4c3;
+
+    -webkit-background-clip: initial;
+    -webkit-text-fill-color: initial;
+}
+
+#evento .cards p.obs {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+#evento  p.obs.desktop {
+    display: none;
+}
+
+#evento  header h2 {
+    font-size: 1.6rem;
+}
+
+@media (min-width: 1080px) {
+    section#evento .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8rem;
+    }
+
+    section#evento  header {
+        margin-bottom: 0;
+
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    section#evento  header h2 {
+        font-size: 3rem;
+    }
+
+    section#evento .cards p.obs.mobile {
+        display: none;
+    }
+
+    section#evento header p {
+        margin-bottom: 0;
+        font-size: 1.4rem;
+    }
+
+    section#evento p.obs.desktop {
+        display: inherit;
+        color: #10a2f7;
+        font-size: 1.1rem;
+        font-weight: 500;
+
+        margin-top: 1.5rem;
+    }
+
+    section#evento .content .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    section#evento .content .cards .card {
+        padding-block: 4rem;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section#evento .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .v2 section#evento .card h3 {
+        font-family: var(--tts);
+        font-size: 1.6rem;
+    }
+
+    .v2 section#evento .card h3 span {
+        font-size: 2.5rem;
+        font-family: var(--ncs);
+        background: linear-gradient(45deg, #188BCD, #3B38BC);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .v2 section#evento .content .cards .card.tres h3 {
+        font-size: 1.2rem;
+    }
+
+    .v2 section#evento .content .cards .card.tres h3 span {
+        font-size: 1.2rem;
+    }
+}

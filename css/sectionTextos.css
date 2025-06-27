@@ -1,0 +1,197 @@
+#textos {
+    overflow: hidden;
+    position: relative;
+}
+
+#textos .content {
+    position: relative;
+    z-index: 1;
+}
+
+#textos img.bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+#textos img.bg.desktop {
+    display: none;
+}
+
+#textos .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    position: relative;
+}
+
+#textos .cards .arrow {
+    width: 3rem;
+
+    position: absolute;
+}
+
+#textos .cards .arrow.left {
+    left: -2rem;
+}
+
+#textos .cards .arrow.left.um {
+    top: 12%;
+}
+
+#textos .cards .arrow.left.tres {
+    top: 45%;
+}
+
+#textos .cards .arrow.left.cinco {
+    top: 78%;
+}
+
+#textos .cards .arrow.right {
+    right: -2rem;
+}
+
+#textos .cards .arrow.right.dois {
+    top: 28%;
+}
+
+#textos .cards .arrow.right.quatro {
+    top: 62%;
+}
+
+#textos .cards .arrow.left.seis,
+#textos .cards .arrow.left.sete,
+#textos .cards .arrow.left.oito {
+    display: none;
+}
+
+#textos a button {
+    margin-top: 3rem;
+}
+
+#textos .card {
+    position: relative;
+    z-index: 2;
+
+    padding: 3rem;
+    border-radius: 1rem;
+    background: #020d1d;
+    border: 2px solid #ffffff26;
+
+    box-shadow:  10px 10px 30px #13134538,
+             -10px -10px 30px #032b443a;
+}
+
+#textos .card p {
+    font-size: 1.4rem;
+    color: #fff;
+
+    text-align: left;
+}
+
+#textos .card p span {
+    background: linear-gradient(45deg, #188BCD, #5451fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    font-weight: 700;
+}
+
+@media (min-width: 1080px) {
+    section#textos img.bg.mobile {
+        display: none;
+    }
+
+    section#textos img.bg.desktop {
+        display: inherit;
+    }
+
+    section#textos header {
+        padding-inline: 20%;
+
+        margin-bottom: 4rem;
+    }
+
+    section#textos .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section#textos .cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    section#textos .cards .card {
+        height: 100%;
+        padding: 5rem;
+        
+        background: linear-gradient(145deg, #011828, #020d1d,#020d1d, #070720);
+        border: 2px solid #ffffff3d;
+    }
+
+    section#textos .card p {
+        font-size: 1.6rem;
+    }
+
+    section#textos .cards .arrow.left {
+        left: -2rem;
+    }
+
+    section#textos .cards .arrow.left.um {
+        top: 34%;
+    }
+
+    section#textos .cards .arrow.left.tres {
+        top: initial;
+        bottom: -4.5rem;
+        transform: rotate(-90deg);
+        left: 32%;
+    }
+
+    section#textos .cards .arrow.left.cinco {
+        top: initial;
+        bottom: -4.5rem;
+        transform: rotate(-90deg);
+        left: 65%;
+    }
+
+    section#textos .cards .arrow.left.seis {
+        display: inherit;
+        top: 34%;
+        right: -2rem;
+        left: initial;
+
+        transform: rotate(-180deg);
+    }
+
+    section#textos .cards .arrow.left.sete {
+        display: inherit;
+        top: -4.5rem;
+        transform: rotate(90deg);
+        left: 32%;
+    }
+
+    section#textos .cards .arrow.left.oito {
+        display: inherit;
+        top: -4.5rem;
+        transform: rotate(90deg);
+        left: 65%;
+    }
+
+    section#textos .cards .arrow.right {
+        display: none;
+    }
+
+    section#textos a button {
+        margin-top: 5rem;
+    }
+}

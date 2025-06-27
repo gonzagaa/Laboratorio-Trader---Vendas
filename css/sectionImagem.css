@@ -1,0 +1,111 @@
+#imagem {
+    position: relative;
+    overflow: hidden;
+}
+
+#imagem img.bg {
+    position: absolute;
+    width: 160%;
+    top: -16%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 0;
+
+    mask-image: linear-gradient(to bottom, #000 0%, transparent 60%);
+}
+
+#imagem header {
+    position: relative;
+    z-index: 1;
+
+    margin-top: 50%;
+}
+
+#imagem header h2 {
+    font-size: 1.4rem;
+
+    margin-bottom: 2rem;
+}
+
+#imagem header p {
+    font-size: 1.4rem;
+    padding-inline: 5%;
+}
+
+#imagem header p.obs {
+    font-size: 1.2rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background: #ffffff0d;
+    border-radius: .5rem;
+    width: 100%;
+    border: 3px solid #188bcd37;
+}
+
+#imagem header p.obss {
+    font-size: 1.6rem;
+    background: linear-gradient(45deg, #08a2fb, #3d3ae9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+
+    padding-inline: 0;
+}
+
+#imagem header h3 {
+    color: #fff;
+    font-size: 1.6rem;
+    text-align: center;
+    font-weight: 400;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background: #ffffff0d;
+    border-radius: .5rem;
+    width: 100%;
+    border: 3px solid #188bcd37;
+}
+
+@media (min-width: 1080px) {
+    section#imagem .content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    section#imagem header {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin-top: 0;
+    }
+
+    section#imagem header h2 {
+        font-size: 3.5rem;
+    }
+
+    section#imagem header p {
+        padding-inline: 0;
+        font-size: 1.3rem;
+    }
+
+    section#imagem img.bg {
+        mask-image: linear-gradient(to left, #000 50%, transparent);
+        width: 75%;
+        right: -8%;
+        left: initial;
+        transform: initial;
+        top: -60%;
+    }
+}
+
+@media (min-width: 1700px) {
+     section#imagem img.bg {
+        width: 50%;
+        right: 0%;
+     }
+}
