@@ -50,43 +50,8 @@ if (larguraDaTela < 800) {
       });
 }
 
-  const videoBoxes = document.querySelectorAll(".video");
-  const modal = document.getElementById("videoModal");
-  const videoContainer = document.getElementById("videoContainer");
-  const closeBtn = document.querySelector(".close");
-
-  videoBoxes.forEach(box => {
-    box.addEventListener("click", () => {
-      const videoSrc = box.getAttribute("data-video");
-
-      // Cria o elemento <video>
-      const video = document.createElement("video");
-      video.src = videoSrc;
-      video.controls = true;
-      video.autoplay = true;
-      videoContainer.innerHTML = "";
-      videoContainer.appendChild(video);
-
-      // Abre o modal
-      modal.style.display = "flex";
-    });
-  });
-
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-    videoContainer.innerHTML = ""; // remove o vídeo para parar o carregamento
-  });
-
-  // Fecha o modal ao clicar fora
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-      videoContainer.innerHTML = "";
-    }
-  });
-
-const novaPorcentagem = 30;
-const classePorcentagem = 'p30'; // arredondado para o nome da classe
+const novaPorcentagem = 13;
+const classePorcentagem = 'p13'; // arredondado para o nome da classe
 
 // Atualiza todas as barras
 const bars = document.querySelectorAll('.bar');
@@ -101,6 +66,47 @@ textos.forEach(texto => {
   const span = texto.querySelector('span');
   if (span) {
     texto.innerHTML = `${span.outerHTML} ${novaPorcentagem}% dos ingressos vendidos`;
+  }
+});
+
+const modalGeral = document.getElementById("modalDepoimentos");
+const videoContainerGeral = document.getElementById("video-container-geral");
+const closeBtnGeral = document.querySelector(".close-depoimento-geral");
+
+// Seleciona todos os .card que têm o atributo data-video
+document.querySelectorAll(".card[data-video]").forEach((card) => {
+  card.addEventListener("click", () => {
+    const videoUrl = card.getAttribute("data-video");
+    if (!videoUrl) return;
+
+    modalGeral.style.display = "flex";
+    videoContainerGeral.innerHTML = `
+      <iframe src="${videoUrl}?autoplay=1&rel=0"
+        title="Depoimento"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+    `;
+  });
+});
+
+closeBtnGeral.addEventListener("click", () => {
+  modalGeral.style.display = "none";
+  videoContainerGeral.innerHTML = "";
+});
+
+window.addEventListener("click", (e) => {
+  if (e.target === modalGeral) {
+    modalGeral.style.display = "none";
+    videoContainerGeral.innerHTML = "";
+  }
+});
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && modalGeral.style.display === "flex") {
+    modalGeral.style.display = "none";
+    videoContainerGeral.innerHTML = "";
   }
 });
 
